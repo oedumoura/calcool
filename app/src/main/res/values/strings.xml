@@ -1,3 +1,12 @@
 <resources>
-    <string name="app_name">CAlcoolbebidas</string>
+    <string name="app_name">CalcoolBebidas</string>
+    <string-array name="marcas_array">
+        <item>Bebida 1</item>
+        <item>Bebida 2</item>
+        <item>Skol</item>
+        <item>Bud</item>
+        <item>Stela</item>
+        <item>Heineken</item>
+    </string-array>
+
 </resources>

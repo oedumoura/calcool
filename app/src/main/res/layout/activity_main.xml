@@ -1,69 +1,110 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="16dp"
     tools:context=".MainActivity">
+
+    <Spinner
+        android:id="@+id/spinnerMarca1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="16dp"/>
+
+    <EditText
+        android:id="@+id/editTextOutraMarca1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Digite a marca 1"
+        android:layout_below="@id/spinnerMarca1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:visibility="gone"/>
 
     <EditText
         android:id="@+id/editTextValor1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Valor da primeira bebida" />
+        android:hint="Digite o valor em reais: R$"
+        android:layout_below="@id/editTextOutraMarca1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"/>
 
     <EditText
         android:id="@+id/editTextMl1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Quantidade em mls da primeira bebida" />
+        android:hint="Digite a quantidade em mls:"
+        android:layout_below="@id/editTextValor1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"/>
+
+    <Spinner
+        android:id="@+id/spinnerMarca2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextMl1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"/>
+
+    <EditText
+        android:id="@+id/editTextOutraMarca2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Digite a marca 2"
+        android:layout_below="@id/spinnerMarca2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:visibility="gone"/>
 
     <EditText
         android:id="@+id/editTextValor2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Valor da segunda bebida" />
+        android:hint="Digite o valor em reais: R$"
+        android:layout_below="@id/editTextOutraMarca2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"/>
 
     <EditText
         android:id="@+id/editTextMl2"
-        android:layout_width="379dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Quantidade em mls da segunda bebida" />
+        android:hint="Digite a quantidade em mls:"
+        android:layout_below="@id/editTextValor2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"/>
 
     <Button
-        android:id="@+id/calculateButton"
+        android:id="@+id/btnCalcular"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:onClick="calculateButtonClicked"
-        android:text="Calcular" />
+        android:text="Calcular"
+        android:layout_below="@id/editTextMl2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:onClick="calcularValores"/>
 
     <TextView
         android:id="@+id/textViewResult1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="16dp"
-        android:textSize="18sp" />
+        android:text=""
+        android:layout_below="@id/btnCalcular"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"/>
 
     <TextView
         android:id="@+id/textViewResult2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="8dp"
-        android:textSize="18sp" />
+        android:text=""
+        android:layout_below="@id/textViewResult1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"/>
 
-    <TextView
-        android:id="@+id/textViewComparison"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="16dp"
-        android:textSize="18sp" />
-
-</LinearLayout>
-
-
+</RelativeLayout>
